@@ -1,0 +1,7 @@
+package com.parkinglot.model;
+
+public class Car extends Vehicle {
+    public Car(String plate) {
+        super(plate, VehicleType.CAR);
+    }
+}

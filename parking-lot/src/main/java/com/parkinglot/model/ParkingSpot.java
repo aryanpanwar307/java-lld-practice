@@ -17,9 +17,9 @@ public class ParkingSpot {
     public boolean canFit(VehicleType vehicleType) {
         switch (vehicleType) {
             case BIKE:
-                return spotType == SpotType.SMALL || spotType == SpotType.MEDIUM || spotType == SpotType.LARGE;
+                return spotType == SpotType.SMALL;
             case CAR:
-                return spotType == SpotType.MEDIUM || spotType == SpotType.LARGE;
+                return spotType == SpotType.MEDIUM;
             case TRUCK:
                 return spotType == SpotType.LARGE;
             default:

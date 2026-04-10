@@ -33,4 +33,16 @@ public class ParkingFloor {
                 .count();
     }
 
+    public void getStatus() {
+        System.out.println("Floor" + floorNo + ":");
+        for (ParkingSpot spot : spots) {
+            String status = spot.isAvailable() ? "FREE" : "OCCUPIED";
+            System.out.printf("Spot %-3d [%-6s] %s%n", spot.getSpotNumber(), spot.getSpotType(), status);
+        }
+    }
+
+    public int getFloorNo() {
+        return floorNo;
+    }
+
 }

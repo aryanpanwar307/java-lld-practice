@@ -18,21 +18,3 @@ public abstract class Vehicle {
     }
 
 }
-
-class Car extends Vehicle {
-    public Car(String plate) {
-        super(plate, VehicleType.CAR);
-    }
-}
-
-class Bike extends Vehicle {
-    public Bike(String plate) {
-        super(plate, VehicleType.BIKE);
-    }
-}
-
-class Truck extends Vehicle {
-    public Truck(String plate) {
-        super(plate, VehicleType.TRUCK);
-    }
-}
