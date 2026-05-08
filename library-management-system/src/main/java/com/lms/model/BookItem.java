@@ -1,16 +1,35 @@
 package com.lms.model;
 
-import java.util.*;
 
 public class BookItem {
-    private final barcode;
-    private final Date purchaseDate;
+    private final String barcode;
     private BookStatus status;
-    privtae Book book;
+    private Book book;
 
-    public BookItem(Book book){
+    public BookItem(String barcode, Book book){
         this.barcode = barcode;
         this.book = book;
-        this.status = 
+        this.status = BookStatus.AVAILABLE;
     }
+
+    public void checkout(){
+        this.status = BookStatus.BORROWED;
+    }
+    public void returnBook(){
+        this.status = BookStatus.AVAILABLE;
+    }
+    public boolean isAvialable(){
+        return status == BookStatus.AVAILABLE;
+    }
+
+    public String getBarcode(){
+        return barcode;
+    }
+
+    public Book getBook(){
+        return book;
+    }
+
+    public BookStatus getStatus(){ return status; }
+    
 }

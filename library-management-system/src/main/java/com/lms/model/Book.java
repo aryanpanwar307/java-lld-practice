@@ -16,4 +16,19 @@ public class Book {
         this.copies = new ArrayList<>();
     }
 
+    public void addCopy(BookItem bookItem){
+        copies.add(bookItem);
+    }
+
+    public BookItem getAvailableCopy(){
+        return copies.stream().filter(book -> book.getStatus()==BookStatus.AVAILABLE).findFirst().orElse(null);
+    }
+
+    public long getAvailableCount(){
+        return copies.stream().filter(book -> book.getStatus() == BookStatus.AVAILABLE).count();
+    }
+
+    public String getIsbn()   { return isbn; }
+    public String getTitle()  { return title; }
+    public String getAuthor() { return author; }
 }
