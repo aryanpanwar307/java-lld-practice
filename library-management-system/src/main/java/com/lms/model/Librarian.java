@@ -13,4 +13,17 @@ public class Librarian extends Person {
         return "Librarian";
     }
 
+    public void addBookToCatalog(Catalog catalog, Book book) {
+        catalog.addBook(book);
+        System.out.println(getName() + " added: " + book.getTitle());
+    }
+
+    public void addBookItem(Book book, BookItem item) {
+        book.addCopy(item);
+    }
+
+    public String getEmpId() {
+        return empId;
+    }
+
 }

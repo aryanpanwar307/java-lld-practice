@@ -27,7 +27,7 @@ public class Member extends Person {
         return (borrowCount < MAX_BORROW_LIMIT) ? true : false;
     }
 
-    public void addBorrowRecord(BorrowItem borrowItem) {
+    public void addBorrowRecord(BookItem borrowItem) {
         borrowHistory.add(borrowItem);
         borrowCount++;
     }
